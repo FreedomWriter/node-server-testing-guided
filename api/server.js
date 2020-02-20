@@ -20,4 +20,18 @@ server.get("/hobbits", (req, res) => {
     });
 });
 
+server.post("/hobbits", async (req, res) => {
+  try {
+    const hobbit = await Hobbits.insert(req.body);
+    res.status(201).json(hobbit);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+if (!module.parent) {
+  const port = process.env.PORT || 5000;
+  server.listen(port, () => console.log(`\n** server up on port ${port} **\n`));
+}
+
 module.exports = server;
