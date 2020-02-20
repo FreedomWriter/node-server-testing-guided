@@ -11,9 +11,14 @@ Types of Automated Testing
 
 # Add a test script
 
-    ```js
-    "test": "jest --verbose --watch"
-    ```
+```js
+    //start
+    "test": "cross-env DB_ENV=testing jest --verbose --watch"
+    // add
+      "jest": {
+    "testEnvironment": "node"
+    }
+```
 
 # Create first test file
 

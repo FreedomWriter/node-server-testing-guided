@@ -4,9 +4,9 @@
   "description": "Starter Code for Node Server Testing Module",
   "main": "index.js",
   "scripts": {
-    "server": " cross-env DB_ENV=dev nodemon index.js",
+    "server": "cross-env DB_ENV=dev nodemon index.js",
     "start": "node index.js",
-    "test": " cross-env DB_ENV=testing jest --verbose --watch"
+    "test": "cross-env DB_ENV=testing jest --verbose --watch"
   },
   "keywords": [],
   "author": "Lambda School",
